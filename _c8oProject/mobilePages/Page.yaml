@@ -1,5 +1,5 @@
 ↑isRoot: true
-comment: My First Page as root page
+comment: Grid animation loop within the same page
 preloadPriority: high
 scriptContent: 
   - xmlizable: 
@@ -60,6 +60,227 @@ title: First page
   beanData: '{"ionBean":"Content"}'
   comment: Page content
   tagName: ion-content
+  ↓Directive [ngx.components.UIControlDirective-1672997405026]: 
+    directiveName: If
+    directiveSource: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:local.step == 0 || local.step == 1
+    ↓Grid [ngx.components.UIDynamicElement-1672997410736]: 
+      beanData: '{"ionBean":"Grid"}'
+      tagName: ion-grid
+      ↓GridRow [ngx.components.UIDynamicElement-1672997410738]: 
+        beanData: '{"ionBean":"GridRow","FlexAlignement":"plain:ion-align-items-center"}'
+        tagName: ion-row
+        ↓GridCol [ngx.components.UIDynamicElement-1672997410740]: 
+          beanData: '{"ionBean":"GridCol","Size":"plain:2"}'
+          tagName: ion-col
+        ↓GridCol1 [ngx.components.UIDynamicElement-1672997410746]: 
+          beanData: '{"ionBean":"GridCol","Size":"plain:4"}'
+          tagName: ion-col
+          ↓CardContainer [ngx.components.UIDynamicElement-1672997706822]: 
+            beanData: '{"ionBean":"Card"}'
+            tagName: ion-card
+            ↓Image [ngx.components.UIDynamicElement-1673001276114]: 
+              beanData: '{"ionBean":"Image","url":"source:{\"filter\":\"Asset\",\"project\":\"animation\",\"input\":\"\",\"model\":{\"data\":[{\"asset\":\"''assets\\\/Kawaii-Free-PNG-Image.png''\"}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
+              selfClose: true
+              tagName: img
+            ↓CardHeader [ngx.components.UIDynamicElement-1672997706826]: 
+              beanData: '{"ionBean":"CardHeader"}'
+              tagName: ion-card-header
+              ↓CardTitle [ngx.components.UIDynamicElement-1672997706828]: 
+                beanData: '{"ionBean":"CardTitle"}'
+                tagName: ion-card-title
+                ↓TextItem [ngx.components.UIDynamicElement-1672997706830]: 
+                  beanData: '{"ionBean":"TextItem"}'
+                  tagName: ion-text
+                  ↓Text [ngx.components.UIText-1672997706832]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:Card Title
+              ↓CardSubTitle [ngx.components.UIDynamicElement-1672997706834]: 
+                beanData: '{"ionBean":"CardSubTitle"}'
+                tagName: ion-card-subtitle
+                ↓TextItem [ngx.components.UIDynamicElement-1672997706836]: 
+                  beanData: '{"ionBean":"TextItem"}'
+                  tagName: ion-text
+                  ↓Text [ngx.components.UIText-1672997706838]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:Card SubTitle
+            ↓CardContent [ngx.components.UIDynamicElement-1672997706840]: 
+              beanData: '{"ionBean":"CardContent"}'
+              tagName: ion-card-content
+              ↓TextItem [ngx.components.UIDynamicElement-1672997706842]: 
+                beanData: '{"ionBean":"TextItem"}'
+                tagName: ion-text
+                ↓Text [ngx.components.UIText-1672997706844]: 
+                  textValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: plain:Card Content
+              ↓Button [ngx.components.UIDynamicElement-1673001569666]: 
+                beanData: '{"ionBean":"Button"}'
+                tagName: ion-button
+                ↓Label [ngx.components.UIDynamicElement-1673001569668]: 
+                  beanData: '{"ionBean":"Label"}'
+                  tagName: ion-label
+                  ↓Text [ngx.components.UIText-1673001569670]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:next
+                ↓Event [ngx.components.UIControlEvent-1673001569672]: 
+                  ↓SetLocal [ngx.components.UIDynamicAction-1673001603983]: 
+                    beanData: |
+                      '{
+                       "ionBean": "SetLocalAction",
+                       "Property": "plain:step",
+                       "Value": "script:1"
+                      }'
+                    ↓delay_next_step [ngx.components.UICustomAction-1673001889001]: 
+                      actionValue: 
+                        - xmlizable: 
+                          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                            →: |
+                              '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                              		window.setTimeout(()=>{page.local.step = vars.step*1}, vars.delay*1);
+                              		resolve();
+                              '
+                      ↓step [ngx.components.UIControlVariable-1673003872205]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                            - MobileSmartSourceType: plain:2
+                      ↓delay [ngx.components.UIControlVariable-1673003874056]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                            - MobileSmartSourceType: plain:500
+      ↓Animation [ngx.components.UIAnimation-1672997969433]: 
+        animationName: slow
+      ↓Attr [ngx.components.UIAttribute-1673000461451]: 
+        attrName: '[ngClass]'
+        attrValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: 'script:this.local.step == 0 ? ''animate__''+this.local.animation_in : ''animate__''+this.local.animation_out'
+  ↓Directive1 [ngx.components.UIControlDirective-1673001728484]: 
+    directiveName: If
+    directiveSource: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:local.step == 2 || local.step == 3
+    ↓Grid [ngx.components.UIDynamicElement-1673001728487]: 
+      beanData: '{"ionBean":"Grid"}'
+      tagName: ion-grid
+      ↓GridRow [ngx.components.UIDynamicElement-1673001728490]: 
+        beanData: '{"ionBean":"GridRow","FlexAlignement":"plain:ion-align-items-center"}'
+        tagName: ion-row
+        ↓GridCol [ngx.components.UIDynamicElement-1673001728493]: 
+          beanData: '{"ionBean":"GridCol","Size":"plain:2"}'
+          tagName: ion-col
+        ↓GridCol1 [ngx.components.UIDynamicElement-1673001728496]: 
+          beanData: '{"ionBean":"GridCol","Size":"plain:4"}'
+          tagName: ion-col
+          ↓CardContainer [ngx.components.UIDynamicElement-1673001728499]: 
+            beanData: '{"ionBean":"Card"}'
+            tagName: ion-card
+            ↓Image [ngx.components.UIDynamicElement-1673001728505]: 
+              beanData: |
+                '{
+                 "ionBean": "Image",
+                 "url": "source:{\"filter\":\"Asset\",\"project\":\"animation\",\"input\":\"\",\"model\":{\"data\":[{\"asset\":\"''assets\\\/Kawaii-PNG-Pic2.png''\"}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}",
+                 "width": "plain:75%"
+                }'
+              selfClose: true
+              tagName: img
+            ↓CardHeader [ngx.components.UIDynamicElement-1673001728508]: 
+              beanData: '{"ionBean":"CardHeader"}'
+              tagName: ion-card-header
+              ↓CardTitle [ngx.components.UIDynamicElement-1673001728511]: 
+                beanData: '{"ionBean":"CardTitle"}'
+                tagName: ion-card-title
+                ↓TextItem [ngx.components.UIDynamicElement-1673001728514]: 
+                  beanData: '{"ionBean":"TextItem"}'
+                  tagName: ion-text
+                  ↓Text [ngx.components.UIText-1673001728517]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:Card Title
+              ↓CardSubTitle [ngx.components.UIDynamicElement-1673001728520]: 
+                beanData: '{"ionBean":"CardSubTitle"}'
+                tagName: ion-card-subtitle
+                ↓TextItem [ngx.components.UIDynamicElement-1673001728523]: 
+                  beanData: '{"ionBean":"TextItem"}'
+                  tagName: ion-text
+                  ↓Text [ngx.components.UIText-1673001728526]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:Card SubTitle
+            ↓CardContent [ngx.components.UIDynamicElement-1673001728529]: 
+              beanData: '{"ionBean":"CardContent"}'
+              tagName: ion-card-content
+              ↓TextItem [ngx.components.UIDynamicElement-1673001728532]: 
+                beanData: '{"ionBean":"TextItem"}'
+                tagName: ion-text
+                ↓Text [ngx.components.UIText-1673001728535]: 
+                  textValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: plain:Card Content
+              ↓Button [ngx.components.UIDynamicElement-1673001728538]: 
+                beanData: '{"ionBean":"Button"}'
+                tagName: ion-button
+                ↓Label [ngx.components.UIDynamicElement-1673001728541]: 
+                  beanData: '{"ionBean":"Label"}'
+                  tagName: ion-label
+                  ↓Text [ngx.components.UIText-1673001728544]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:next
+                ↓Event [ngx.components.UIControlEvent-1673001728547]: 
+                  ↓SetLocal [ngx.components.UIDynamicAction-1673001728550]: 
+                    beanData: |
+                      '{
+                       "ionBean": "SetLocalAction",
+                       "Property": "plain:step",
+                       "Value": "script:3"
+                      }'
+                    ↓delay_next_step [ngx.components.UICustomAction-1673012103106]: 
+                      actionValue: 
+                        - xmlizable: 
+                          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                            →: |
+                              '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                              		window.setTimeout(()=>{page.local.step = vars.step*1}, vars.delay*1);
+                              		resolve();
+                              '
+                      ↓step [ngx.components.UIControlVariable-1673012103109]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                            - MobileSmartSourceType: plain:0
+                      ↓delay [ngx.components.UIControlVariable-1673012103112]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                            - MobileSmartSourceType: plain:500
+      ↓Animation [ngx.components.UIAnimation-1673001728553]: 
+        animationName: slow
+      ↓Attr [ngx.components.UIAttribute-1673001728556]: 
+        attrName: '[ngClass]'
+        attrValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: 'script:this.local.step == 2 ? ''animate__''+this.local.animation_in : ''animate__''+this.local.animation_out'
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
@@ -89,3 +310,25 @@ title: First page
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Action 2
+↓PageEvent [ngx.components.UIPageEvent-1672997604341]: 
+  ↓SetLocal [ngx.components.UIDynamicAction-1672997618008]: 
+    beanData: |
+      '{
+       "ionBean": "SetLocalAction",
+       "Property": "plain:step",
+       "Value": "script:0"
+      }'
+    ↓SetLocal1 [ngx.components.UIDynamicAction-1673002859696]: 
+      beanData: |
+        '{
+         "ionBean": "SetLocalAction",
+         "Property": "plain:animation_in",
+         "Value": "script:''fadeInLeftBig''"
+        }'
+    ↓SetLocal2 [ngx.components.UIDynamicAction-1673003167862]: 
+      beanData: |
+        '{
+         "ionBean": "SetLocalAction",
+         "Property": "plain:animation_out",
+         "Value": "script:''fadeOut''"
+        }'
